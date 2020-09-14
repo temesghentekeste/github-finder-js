@@ -9,6 +9,7 @@ UIsearchUserName.addEventListener('keyup', e => {
   if(username !== '') {
     github.getUser(username)
           .then( data => {
+            console.log(data);
             if(data.profile.message === 'Not Found') {
               ui.clearAlert();
               // Show alert
@@ -16,6 +17,8 @@ UIsearchUserName.addEventListener('keyup', e => {
             }else {
               // Show profile
               ui.showProfile(data.profile);
+              // Show repos
+              ui.showRepos(data.repos);
             }
           })
           .catch(err => console.log(err));

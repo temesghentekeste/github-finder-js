@@ -32,6 +32,30 @@ class UI {
     `;
   }
 
+  showRepos(repos) {
+    let output = '';
+
+    repos.forEach( repo => {
+      output += `
+          <div class="card card-body bg-light mb-2">
+            <div class="row">
+              <div class="col-md-6">
+                <a class="text-white" href="${repo.html_url}" target="_blank">${repo.name}</a>
+              </div>
+              <div class="col-md-6">
+                <span class="badge badge-pill badge-primary">Stars: ${repo.stargazers_count}</span>
+                <span class="badge badge-pill badge-info">Watchs: ${repo.watchers_count}</span>
+                <span class="badge badge-pill badge-success">Forks: ${repo.forks_count}</span>
+              </div>
+            </div>
+          </div>
+        `;
+    });
+
+    const UIrepos = document.querySelector('#repos');
+    UIrepos.innerHTML = output;
+  }
+
   clearProfile() {
     this.profile.innerHTML = '';
   }
