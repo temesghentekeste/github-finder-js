@@ -10,8 +10,9 @@ UIsearchUserName.addEventListener('keyup', e => {
     github.getUser(username)
           .then( data => {
             if(data.profile.message === 'Not Found') {
+              ui.clearAlert();
               // Show alert
-              console.log('Unable to fetch data');
+              ui.showAlert('User Not Found!', 'alert alert-danger');
             }else {
               // Show profile
               ui.showProfile(data.profile);
@@ -19,7 +20,6 @@ UIsearchUserName.addEventListener('keyup', e => {
           })
           .catch(err => console.log(err));
   }else {
-    username = '';
-    console.log('Empty')
+    ui.clearProfile();
   }
 })
