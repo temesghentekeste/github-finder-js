@@ -1,0 +1,25 @@
+{
+  "name": "github-finder",
+  "version": "1.0.0",
+  "description": "GitHub Finder is a JavaScript project that makes API calls to the gitHub api using async-await keywords and promises. It is part of a famous JavaScript course in Udemy touhgt by Brad Traversy.",
+  "main": "index.js",
+  "dependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/temesghentekeste/github-finder-js.git"
+  },
+  "author": "Temesghen Tekeste",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/temesghentekeste/github-finder-js/issues"
+  },
+  "homepage": "https://github.com/temesghentekeste/github-finder-js#readme"
+}
