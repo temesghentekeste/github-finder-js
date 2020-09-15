@@ -7,7 +7,6 @@
 ## Content
 
 <a text-align="center" href="#about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-<a href="#description">Description</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#live">Live Demo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#screenshots">Screenshots</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#with">Built with</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -20,9 +19,7 @@
 ## About <a name = "about"></a>
 
 GitHub Finder is a project intended to showcase such asynchrounous JavaScript programming skills as API calls using async and await keywords and promises. The project utilizes GitHub api to fetch the profile information and latest repos of a particular GitHub user account.
-
-<h3>Description <a name = "description"></a></h3>
-<h4>This project allows a user to:</h4>
+In nutshell, the project allows a user to:
 <li>Search by GitHub username</li>
 <li>Fetch the profile info</li>
 <li>List the latest 5 repos of the GitHub user</li>
