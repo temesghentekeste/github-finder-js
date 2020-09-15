@@ -1,28 +1,27 @@
-const github = new Github();
-const ui = new UI();
+const github = new Github(); // eslint-disable-line no-undef
+const ui = new UI(); // eslint-disable-line no-undef
 
 const UIsearchUserName = document.querySelector('#searchUser');
 
 UIsearchUserName.addEventListener('keyup', e => {
-  let username = e.target.value;
+  const username = e.target.value;
 
-  if(username !== '') {
+  if (username !== '') {
     github.getUser(username)
-          .then( data => {
-            console.log(data);
-            if(data.profile.message === 'Not Found') {
-              ui.clearAlert();
-              // Show alert
-              ui.showAlert('User Not Found!', 'alert alert-danger');
-            }else {
-              // Show profile
-              ui.showProfile(data.profile);
-              // Show repos
-              ui.showRepos(data.repos);
-            }
-          })
-          .catch(err => console.log(err));
-  }else {
+      .then(data => {
+        if (data.profile.message === 'Not Found') {
+          ui.clearAlert();
+          // Show alert
+          ui.showAlert('User Not Found!', 'alert alert-danger');
+        } else {
+          // Show profile
+          ui.showProfile(data.profile);
+          // Show repos
+          ui.showRepos(data.repos);
+        }
+      })
+      .catch(() => ui.showAlert('Something went wrong', 'alert alert-danger'));
+  } else {
     ui.clearProfile();
   }
-})
+});

@@ -1,10 +1,12 @@
+/* eslint class-methods-use-this: ["error",
+  { "exceptMethods": ["showProfile", "showRepos", "clearAlert"] }] */
+// eslint-disable-next-line no-unused-vars
 class UI {
   constructor() {
     this.profile = document.querySelector('#profile');
   }
 
   showProfile(user) {
-    console.log(user)
     this.profile.innerHTML = `
       <div class="card card-body mb-3">
         <div class="row">
@@ -35,7 +37,7 @@ class UI {
   showRepos(repos) {
     let output = '';
 
-    repos.forEach( repo => {
+    repos.forEach(repo => {
       output += `
           <div class="card card-body bg-repos mb-2">
             <div class="row">
@@ -62,12 +64,12 @@ class UI {
 
   clearAlert() {
     const currentAlert = document.querySelector('.alert');
-    if(currentAlert) {
+    if (currentAlert) {
       currentAlert.remove();
     }
   }
 
-  showAlert(message, className){
+  showAlert(message, className) {
     const div = document.createElement('div');
     div.className = className;
     div.appendChild(document.createTextNode(message));
@@ -75,7 +77,7 @@ class UI {
     const search = document.querySelector('.search');
     container.insertBefore(div, search);
 
-    setTimeout(()=>{
+    setTimeout(() => {
       this.clearAlert();
     }, 3000);
   }

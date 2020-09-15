@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 class Github {
   constructor() {
     this.clientId = '75e3235a908a255af6ad';
@@ -8,16 +9,16 @@ class Github {
   }
 
   async getUser(user) {
-    const profileResponse = await fetch(this.githubURI + `/${user}?client_id=${this.clientId}&client_secret=${this.clientSecret}`);
+    const profileResponse = await fetch(`${this.githubURI}/${user}?client_id=${this.clientId}&client_secret=${this.clientSecret}`);
 
-    const reposResponse = await fetch(this.githubURI + `/${user}/repos?per_page=${this.repos_count}&sort=${this.repos_sort}&client_id=${this.clientId}&client_secret=${this.clientSecret}`);
-    
+    const reposResponse = await fetch(`${this.githubURI}/${user}/repos?per_page=${this.repos_count}&sort=${this.repos_sort}&client_id=${this.clientId}&client_secret=${this.clientSecret}`);
+
     const profile = await profileResponse.json();
     const repos = await reposResponse.json();
 
     return {
       profile,
-      repos
+      repos,
     };
   }
 }

@@ -31,9 +31,9 @@ In nutshell, the project allows a user to:
 ## Screenshots <a name = "screenshots"></a>
 
 ### Wide Screen
-![screenshot](./images/screencapture-widescreen.png) 
+![screenshot](./images/screencapture_widescreen.gif) 
 ### Small Screen
-![screenshot](./images/screencapture-mobile.png) 
+![screenshot](./images/screencapture_mobile.gif) 
 
 ## 🔧 Built with<a name = "with"></a>
 
